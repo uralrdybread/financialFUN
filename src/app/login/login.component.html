@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<div class="card col-md-3">
+    <h3> Log-in Portal</h3>
+    <form #loginForm = "ngForm">
+        <label for = "username"> Username: </label><br>
+        <input type = "text" id="username" placeholder="username" 
+        required [(ngModel)] = "username" name = "username" #usernameDir = "ngModel" formController="username"> 
+        <div *ngIf = "usernameDir.invalid && (usernameDir.dirty || usernameDir.touched)" class = "alert alert-danger">
+          <div *ngIf= "usernameDir.errors?.['required']"> Username is required</div>
+        </div>
+        <br>
+        <br>
+        <label for = "password"> Password: </label><br>
+        <input [type] = "repeatFieldTextType ? 'text' : 'password'" id="password"  placeholder="password" 
+        formController= "password" required [(ngModel)] = "password" name = "password" #passwordDir = "ngModel">
+        <div *ngIf = "passwordDir.invalid && (passwordDir.dirty || passwordDir.touched)" class = "alert alert-danger">
+          <div *ngIf= "passwordDir.errors?.['required']"> Password is required</div> 
+        </div>
+            <span>
+              <i
+                class="fa"
+                [ngClass]="{
+                  'fa-eye-slash': !repeatFieldTextType,
+                  'fa-eye': repeatFieldTextType
+                }"
+                (click)="toggleRepeatFieldTextType()"
+              ></i>
+            </span>
+          
+        <br>
+        <br>
+
+
+
+        
+        <button  mat-raised-button color = accent type = "submit" class ="btn" (click) = Loginuser() [disabled]="loginForm.invalid">
+            Log-in
+        </button>
+
+
+        <button class="button" mat-raised-button color = accent type = "submit" class ="btn">
+            <a mat-button  routerLink="/register">Register</a>
+
+        </button>
+    </form>
+</div>
+</html>

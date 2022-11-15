@@ -1,0 +1,88 @@
+<div style="padding: 2em"></div>
+<div class="inner">
+<h1>Take the short FUN financial survey to be directed to an advisor best suited to meet your goals.</h1>
+<h1> We look forward to consulting with you!</h1>
+</div>
+
+
+<div style="padding: 3em">
+<div class="outer">
+<div style="padding: 2em">
+  <div class="inner" style="padding: 1em">
+<p>What kind of services are you looking for?</p>
+<p>
+  <input [(ngModel)]="data.service" name="service" value="Peter2" type="radio" /> Retirement services
+  <input [(ngModel)]="data.service" name="service" value="Steven2" type="radio" /> Family planning
+  <input [(ngModel)]="data.service" name="service" value="Angela2" type="radio" /> Eliminating Debt
+  <input [(ngModel)]="data.service" name="service" value="Kathy2" type="radio" /> Growing savings
+  <input [(ngModel)]="data.service" name="service" value="Marie2" type="radio" /> Create additional income
+</p>
+</div>
+</div>
+<div style="padding: 2em">
+  <div class="inner" style="padding: 1em">
+<p>What is your age?</p>
+<p>
+  <input [(ngModel)]="data.age" name="age" value="Peter" type="radio" />18-30
+  <input [(ngModel)]="data.age" name="age" value="Steven" type="radio" />31-45
+  <input [(ngModel)]="data.age" name="age" value="Angela" type="radio" />31-45
+  <input [(ngModel)]="data.age" name="age" value="Kathy" type="radio" />31-45
+  <input [(ngModel)]="data.age" name="age" value="Marie" type="radio" />31-45
+</p>
+</div>
+</div>
+<div style="padding: 2em">
+  <div class="inner" style="padding: 1em">
+<p>What is your risk tolerance?</p>
+<p>
+  <input [(ngModel)]="data.risk" name="risk" value="Marie" type="radio" />Very Low
+  <input [(ngModel)]="data.risk" name="risk" value="Kathy" type="radio" />Low
+  <input [(ngModel)]="data.risk" name="risk" value="Angela" type="radio" />Moderate
+  <input [(ngModel)]="data.risk" name="risk" value="Steven" type="radio" />High
+  <input [(ngModel)]="data.risk" name="risk" value="Peter" type="radio" />Very High
+</p>
+</div>
+</div>
+<div style="padding: 2em">
+  <div class="inner" style="padding: 1em">
+<p>How much investing experience do you have?</p>
+<p>
+  <input [(ngModel)]="data.exp" name="exp" value="Peter" type="radio" />Very Low to None
+  <input [(ngModel)]="data.exp" name="exp" value="Steven" type="radio" />Low (More than 3 months)
+  <input [(ngModel)]="data.exp" name="exp" value="Angela" type="radio" />Moderate (3 months- 2 years)
+  <input [(ngModel)]="data.exp" name="exp" value="Kathy" type="radio" />High (2-5 years)
+  <input [(ngModel)]="data.exp" name="exp" value="Marie" type="radio" />Very High (More than 5 years)
+</p>
+</div>
+</div>
+<div style="padding: 2em">
+  <div class="inner" style="padding: 1em">
+<p>How much would you like to invest?</p>
+<p>
+  <input [(ngModel)]="data.invest" name="invest" value="Peter" type="radio" /> < $1000
+  <input [(ngModel)]="data.invest" name="invest" value="Steven" type="radio" /> $1,000-$5,000
+  <input [(ngModel)]="data.invest" name="invest" value="Angela" type="radio" /> $5,000-$15,000
+  <input [(ngModel)]="data.invest" name="invest" value="Kathy" type="radio" /> $15,000-$99,000
+  <input [(ngModel)]="data.invest" name="invest" value="Marie" type="radio" /> $100,000+
+</p>
+</div>
+</div>
+<div style="padding: 2em">
+  <div class="inner" style="padding: 1em">
+<p>What Type of Portfolio are you Seeking?</p>
+<p>
+  <input [(ngModel)]="data.port" name="port" value="Peter" type="radio" /> < Tech stocks
+  <input [(ngModel)]="data.port" name="port" value="Marie" type="radio" /> Fixed Income
+  <input [(ngModel)]="data.port" name="port" value="Steven" type="radio" /> ESG Investing
+  <input [(ngModel)]="data.port" name="port" value="Angela" type="radio" /> Fully diversified portfolio
+  <input [(ngModel)]="data.port" name="port" value="Kathy" type="radio" /> High yield stocks paying dividends
+</p>
+</div>
+</div>
+</div>
+<!-- <button (click)="fnClick()">Click</button> -->
+
+<div class="sub">
+<button mat-raised-button color = accent (click)="calculateScore()">Submit</button>
+</div>
+</div>

@@ -1,0 +1,48 @@
+.PastBox
+{
+    margin: auto;
+    width: 74.5%;
+    border: 3px solid; color: #0e1a5f;
+    text-align: center;
+    position: absolute;
+    left: 310px;
+    top: -4px;
+    display:inline-block;
+    overflow-y:auto;
+    height: 102%;
+    // max-height: 100%;
+}
+.table
+{
+    width:100%;
+   
+    table-layout: fixed;
+   
+   
+}
+
+// .cont {
+//     width: 93%;
+//     max-width: 350px;
+//     text-align: center;
+//     margin: 4% auto;
+//     padding: 30px 0;
+//     background: #111;
+//     color: #EEE;
+//     border-radius: 5px;
+//     border: thin solid #444;
+//     overflow: hidden;
+//   }
+//   div.stars {
+//     width: 270px;
+//     display: inline-block;
+//   }
+.inner {
+    width: 50%;
+    border: 3px solid; color: #0e1a5f;
+    padding: 10px;
+  }
+  .alert 
+  {
+    width: 20%;
+  }

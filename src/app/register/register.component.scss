@@ -1,0 +1,22 @@
+.inner {
+    margin: auto;
+    width: 70%;
+    border: 3px solid; color: #0e1a5f;
+    padding: 10px;
+    text-align: center;
+  }
+  .but {
+    padding-top: 20px
+  }
+  // input.ng-invalid
+  // {
+  //   border-left:  5px solid red;
+  // }
+  // input.ng-valid
+  // {
+  //   border-left: 5px solid green;
+  // }
+  .errormessage
+  {
+    color: red;
+  }

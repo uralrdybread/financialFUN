@@ -1,0 +1,72 @@
+
+h1 {
+  text-align: center 
+}
+
+main {
+  width: 340px;
+  overflow: hidden;
+  background-color: #fdfcfc;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000;
+  border-radius: 7px;
+  box-shadow: -4px -4px 20px rgba(0, 0, 0, 0.505);
+  margin: 50px auto;
+}
+
+.top-card {
+  width: 100%;
+  // height: 200px; 
+}
+
+.top-card img {
+  width: 100%;
+}
+
+h1 {
+  font-size: 22px;
+  color: #000;
+  font-weight: 600;
+  margin: 12px 0;
+  text-align: center;
+}
+.middle-card, footer {
+  margin: 5px 25px;
+}
+
+.middle-card {
+  text-align: justify;
+}
+button{
+	width: 110px;
+	height: 37px;
+	margin-top: 10px;
+	border-radius: 2px;
+	background: #1990cc;
+	font-size: 15px;
+	border: none;
+	color: white;
+  text-align: center;
+  
+}
+button:last-child{
+	border: 2px solid #1990cc;
+	background: #1990cc;
+	color: black;
+  margin: 0 auto;
+  display: block;
+}
+.inner {
+  margin: auto;
+  width: 70%;
+  border: 3px solid; color: #0e1a5f;
+  padding: 10px;
+  text-align: center;
+}
+.innercalc {
+  margin: auto;
+  width: 70%;
+  padding: 10px;
+  text-align: center;
+}

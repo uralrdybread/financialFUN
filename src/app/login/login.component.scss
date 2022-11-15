@@ -1,0 +1,37 @@
+button {
+    border: none;
+    background-color: transparent;
+   }
+   .card {
+    padding: 3.125em;
+    margin: 2.8125em;
+    text-align: center;
+    border-color: #101d67;
+    left: 30.75em;
+    border-radius: 50px;
+    border-width: 5px;
+    
+}
+
+.mat-raised-button {
+    padding: 0 6px 0 6px;
+    margin: 6px 8px 6px 8px;
+    min-width: 100px;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration:none;
+    border: none;
+    outline: none;
+ }
+
+ .inner {
+    margin: auto;
+    width: 70%;
+    border: 3px solid; color: #0e1a5f;
+    padding: 10px;
+    text-align: center;
+  }
+  .but {
+    padding-top: 20px
+  }

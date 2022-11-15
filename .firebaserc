@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "projectfun-1bbcd"
+  },
+  "targets": {
+    "projectfun-1bbcd": {
+      "hosting": {
+        "project-fun": [
+          "projectfun-1bbcd"
+        ]
+      }
+    }
+  }
+}

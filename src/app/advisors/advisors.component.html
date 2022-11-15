@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Advisors</title>
+    </head>
+</html>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<mat-tab-group mat-align-tabs="center" animationDuration="2000ms">
+
+      <mat-tab [label]="'Retirement Planning'">
+              <main>
+                <section class="top-card">
+                  <img src="assets/unclephil.jpg" alt="user picture">
+                </section>
+                <section class="middle-card">
+                  <h1>Peter Black</h1>
+                  <h1>Founder and CFRA</h1>
+                  <p></p>
+                </section>
+              </main>
+              
+              <section class="links">
+                <div class="inner">
+                <p>Peter is the Founder of Financial Understanding Now with a passion for educating and assisting others to make the best plans possible for financial freedom. He has over 25 years experience helping customers plan for retirement. As a Certified Financial Retirement Advisor, his expertise is helping young adults understand the benefits of starting retirement planning early on in their professional careers. Peter has developed a unique ability to work directly with young professionals to help them become aware of financial strategies that will be instrumental in their success. He has spearheaded the charge in providing a more personalized and convenient way of connecting people to financial advisors.</p>
+                </div>
+                <div class="innercalc">
+                  <p>Plan a free one on one consultation with Peter. </p>
+                <a mat-raised-button color = accent routerLink="/blackcal">Schedule</a>
+                </div>
+              </section>
+      </mat-tab>
+      
+      <mat-tab [label]="'Eliminating Debt'">
+        <main>
+          <section class="top-card">
+            <img src="assets/carmela.jpg" alt="user picture">
+          </section>
+          <section class="middle-card">
+            <h1>Angela White</h1>
+            <h1>Co-Founder, CFP, ChFC</h1>
+            <p></p>
+          </section>
+        </main>
+        <section class="links">
+          <div class="inner">
+          <p>Angela is a Co-Founder at Financial Understanding Now and has worked as a financial advisor, account executive, assistant manager, and vice president. She tirelessly works to expand the knowledge of her clients empowering them to have more financial freedom and responsibility. She has over 20 years experience and is a Certified Financial Planner and Chartered Financial Consultant. She has taken on challenging roles across the industry and worked tirelessly to produce exceptional results for her clients. </p>
+          </div>
+          <div class="innercalc">
+            <p>Plan a free one on one consultation with Angela. </p>
+          <a mat-raised-button color = accent routerLink="/whitecal">Schedule</a>
+          </div>
+        </section>
+</mat-tab>
+
+      <mat-tab [label]="'Family Planning'">
+        <main>
+          <section class="top-card">
+            <img src="assets/erkel.jpg" alt="user picture">
+          </section>
+          <section class="middle-card">
+            <h1>Steven Erkelan</h1>
+            <h1>CFP, CFBS</h1>
+            <p></p>
+          </section>
+        </main>
+        <section class="links">
+          <div class="inner">
+          <p>Steven is the Customer Experience Manager at Financial Understanding Now. He has built and developed an exemplary professional career working he way up from an account manager to he current role as Head of Strategic Planning. As a Certified Financial Planner and Certified Family Business Specialist his expertise is helping young adults interested in planning for the expenses that come with starting a family. As a father of three he knows just like being a parent, investing also requires a mindset of diligence, patience, and continually adapting to life’s challenges. </p>
+          </div>
+          <div class="innercalc">
+            <p>Plan a free one on one consultation with Steven. </p>
+          <a mat-raised-button color = accent routerLink="/erkelcal">Schedule</a>
+          </div>
+        </section>
+</mat-tab>
+ 
+      <mat-tab [label]="'Growing Savings'">
+        <main>
+          <section class="top-card">
+            <img src="/assets/womanprofile4.jpg" alt="user picture">
+          </section>
+          <section class="middle-card">
+            <h1>Kathy Green</h1>
+            <h1>ChFC, CFA</h1>
+            <p></p>
+          </section>
+        </main>
+        <section class="links">
+          <div class="inner">
+          <p>Kathy is the Head of Market Research and Analysis at Financial Understanding Now. She has almost three decades of experience in the fast-paced financial industry. She has been able to assess market changes in highly volatile markets to provide the safest industry-leaders to provide her clients an opportunity to grow their savings. As a Chartered Financial Analyst  and Chartered Financial Consultant she is experienced in understanding the goals and needs of our customers and providing solutions to achieve these in any market environment. </p>
+          </div>
+          <div class="innercalc">
+            <p>Plan a free one on one consultation with Kathy. </p>
+          <a mat-raised-button color = accent routerLink="/greencal">Schedule</a>
+          </div>
+        </section>
+</mat-tab>
+
+      <mat-tab [label]="'Creating Additional Income'">
+        <main>
+          <section class="top-card">
+            <img src="assets/bbusinesswoman.png" alt="user picture">
+          </section>
+          <section class="middle-card">
+            <h1>Marie Bleu</h1>
+            <h1>FRM, CMFC</h1>
+            <p></p>
+          </section>
+        </main>
+        <section class="links">
+          <div class="inner">
+          <p>Marie is our Client Relationships and Accounts Manager. She maintains the quality of interactions with our long-term clients and strategically plans for income growth investments. Her expertise is finding the best CD’s and Bonds for investment. As a Financial Risk Manager and Chartered Mutual Fund Counselor she is highly skilled at presenting options to our clients.
+            Although only starting with our team in 2016, she has quickly taken center stage when it comes to providing our clients with the exceptional service they deserve. </p>
+          </div>
+          <div class="innercalc">
+            <p>Plan a free one on one consultation with Marie. </p>
+          <a mat-raised-button color = accent routerLink="/bleucal">Schedule</a>
+          </div>
+        </section>
+</mat-tab>
+  </mat-tab-group>
+<app-disclosure></app-disclosure>

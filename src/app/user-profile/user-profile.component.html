@@ -1,0 +1,66 @@
+
+
+    <div class="card" *ngFor="let user of profile"> 
+      <form #profileForm = "ngForm">
+        <label for = "user_id"> User ID: {{user.user_ID}}</label><br>
+        <!-- <select id = "user_id" formController = "user_id">
+            <option [(ngModel)] = "user_ID"> {{user.user_ID}}</option>
+        </select> -->
+        <input type = "Number" id="user_ID" formController = "user_ID"  required [(ngModel)] = "user_ID" name = "user_ID" 
+        min = {{user.user_ID}} max={{user.user_ID}}
+        #idDir = "ngModel">
+        <div *ngIf = "idDir.invalid && (idDir.pristine)" class = "alert alert-danger">
+          <div *ngIf= "idDir.errors?.['required']"> ID is required</div>
+      </div>
+        <br>
+        <label for = "username" class = "uName">Username: {{user.username}}</label><br>
+        <input type = "text" id="username" formController = "username" required [(ngModel)] = "username" #nameDir = "ngModel">
+        <br>
+        <div *ngIf = "nameDir.invalid && (nameDir.dirty || nameDir.touched || nameDir.pristine)" class = "alert alert-danger">
+          <div *ngIf= "nameDir.errors?.['required']"> Username is required</div>
+        </div>
+
+        <label for = "password" class = "password">Password: {{user.password}}</label><br>
+        <input [type] = "repeatFieldTextType ? 'text' : 'password'" id="password" formController = "password" required 
+        [(ngModel)] = "password" #passwordDir = "ngModel">
+        <span>
+            <i
+              class="fa"
+              [ngClass]="{
+                'fa-eye-slash': !repeatFieldTextType,
+                'fa-eye': repeatFieldTextType
+              }"
+              (click)="toggleRepeatFieldTextType()"
+            ></i>
+          </span>
+        <br>
+        <div *ngIf = "passwordDir.invalid && (passwordDir.dirty || passwordDir.touched || passwordDir.pristine)" class = "alert alert-danger">
+          <div *ngIf= "passwordDir.errors?.['required']"> Password is required</div>
+        </div>
+
+        <label for = "name" class = "name">Name: {{user.name}}</label><br>
+        <input type = "text" id="name" formController = "name" requried [(ngModel)] = "name" #UserNameDir = "ngModel" >
+        <br>
+        <div *ngIf = "UserNameDir.invalid && (UserNameDir.dirty || UserNameDir.touched || UserNameDir.pristine)" class = "alert alert-danger">
+          <div *ngIf= "UserNameDir.errors?.['required']"> Full name is required</div>
+        </div>
+        <label for = "phonenumber" class = "phonenumber">Phonenumber: {{user.phonenumber}}</label><br>
+        <input type = "text" id="Phonenumber" formController = "phonenumber"  required [(ngModel)] = "phonenumber" #phoneDir = "ngModel">
+        <br>
+        <div *ngIf = "phoneDir.invalid && (phoneDir.dirty || phoneDir.touched || phoneDir.pristine)" class = "alert alert-danger">
+          <div *ngIf= "phoneDir.errors?.['required']"> Full name is required</div>
+        </div>
+
+        <button type = "button" class = "btn btn-primary" (click) = update() [disabled]="profileForm.invalid">
+            Update User
+        </button>
+        <br>
+        <br>
+        <button type = "button" class = "btn btn-primary" (click) = delete() [disabled]="!idDir.valid">
+            Delete Account
+        </button>
+      </form>
+    </div>
+
+
+

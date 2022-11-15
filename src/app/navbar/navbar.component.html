@@ -1,0 +1,16 @@
+<mat-toolbar color="primary" class="mat-elevation-z6">
+    <span class="center">
+<!-- <img src="/assets/funlogo.png" alt=""> --> 
+        </span>
+<div class="buttons">
+    <a mat-button routerLink="home">Home</a>
+    <a mat-button routerLink="advisors">Advisors</a>
+    <a mat-button routerLink="education">Education</a>
+    <a mat-button routerLink="aboutus">About Us</a>
+    <a mat-button routerLink="reviews">Reviews</a>
+    <a mat-button routerLink="contactus">Contact Us</a>
+</div>
+<a *ngIf = "usrID"class="userProfile" mat-raised-button color = accent routerLink="/userprofile">User Profile</a>
+<a  *ngIf = "!usrID"class="signup" mat-raised-button color = accent routerLink="/login">Sign Up/Login</a>
+<button *ngIf = "usrID" class = "logout" type = "button"  mat-raised-button color = accent (click)= logout()>Log Out</button>
+</mat-toolbar>

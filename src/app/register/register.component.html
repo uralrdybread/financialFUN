@@ -1,0 +1,151 @@
+<div style="padding: 2em">
+<div class="inner">
+    <h3> Registration Portal</h3>
+    <form #regForm = "ngForm">
+        <!-- <form  [formGroup] = "registerForm"></form> -->
+        <label for = "username"> Username:</label><br>
+        <input type = "email" id="username" formController = "username"  required [(ngModel)] = "username" 
+        placeholder="example@provider.com" name = "username" #usernameDir = "ngModel"> <br>
+        <div *ngIf = "usernameDir.invalid && (usernameDir.dirty || usernameDir.touched || usernameDir.pristine)" class = "alert alert-danger">
+            <div *ngIf= "usernameDir.errors?.['required']"> Username is required</div>
+          </div>
+        <br>
+        <br>
+
+        <label for = "password"> Password: </label><br>
+        <input [type] = "repeatFieldTextType ? 'text' : 'password'" id="password" formController= "
+        password" required [(ngModel)] = "password" placeholder="password" name = "password"  #passwordDir = "ngModel"><br>
+        <div *ngIf = "passwordDir.invalid && (passwordDir.dirty || passwordDir.touched || passwordDir.pristine)" class = "alert alert-danger">
+            <div *ngIf= "passwordDir.errors?.['required']"> Password is required</div> 
+          </div>
+        <span>
+            <i
+              class="fa"
+              [ngClass]="{
+                'fa-eye-slash': !repeatFieldTextType,
+                'fa-eye': repeatFieldTextType
+              }"
+              (click)="toggleRepeatFieldTextType()"
+            ></i>
+          </span>
+        <br>
+        <br>
+        <!-- <label for = "confirmpass">  Confirm Password: </label><br>
+        <input [type] = "repeatFieldTextType ? 'text' : 'password'" id=" confirmpass" formController= "
+        confirmpass" required [(ngModel)] = "confirmpass" placeholder="password" name = "password"  #confirmpasswordDir = "ngModel"
+        appConfirmValidator = "passwordDir"><br>
+        <div *ngIf = "confirmpasswordDir.invalid && (confirmpasswordDir.dirty || confirmpasswordDir.touched)" class = "alert">
+            <div *ngIf= "confirmpasswordDir.errors?.['required']"> Confirmation is required</div> 
+            <div *ngIf = " confirmpasswordDir.touched && confirmpasswordDir.errors?.['notEqual'] && !confirmpasswordDir.errors?.['required']"> 
+                Password is not matching</div>
+          </div> -->
+        <!-- <div *ngIf = "confirmpasswordDir.touched && confirmpasswordDir.errors?.['notEqual'] && !confirmpasswordDir.errors?.['required']"> Password does not match</div> -->
+        <!-- <span>
+            <i
+              class="fa"
+              [ngClass]="{
+                'fa-eye-slash': !repeatFieldTextType,
+                'fa-eye': repeatFieldTextType
+              }"
+              (click)="toggleRepeatFieldTextType()"
+            ></i>
+          </span>
+        <br>
+        <br> -->
+
+
+       
+        <label for = "name"> Full Name: </label><br>
+        <input type = "text" id="name" formController = "name" required [(ngModel)] = "name" 
+        placeholder="Jenny Jollin" name = "name" #nameDir = "ngModel" ><br>
+        <div *ngIf = "nameDir.invalid && (nameDir.dirty || nameDir.touched || nameDir.pristine)" class = "alert alert-danger">
+            <div *ngIf= "nameDir.errors?.['required']"> User's full name is required</div>
+          </div>
+        <br>
+        <br>
+        
+        <label for = "phonenumber"> Phone Number: </label><br>
+        <input type = "text" id="phonenumber" formController = "phonenumber" required [(ngModel)] = "phonenumber" 
+        placeholder="(817)-867-5309" name = "phonenumber" #phoneDir = "ngModel" ><br>
+        <div *ngIf = "phoneDir.invalid && (phoneDir.dirty || phoneDir.touched || phoneDir.pristine)" class = "alert alert-danger">
+            <div *ngIf= "phoneDir.errors?.['required']"> Phone number is required</div>
+          </div>
+        <br>
+ 
+
+
+        <label for = "role"> Type:</label><br>
+        <select id="role"formController="role"
+        [(ngModel)] = "role"
+        #roleDir = "ngModel"> 
+            <!-- <option value = "null"> Select one...</option> -->
+            <option *ngFor = "let type of role | keyvalue"   required  [value] = "type">{{type.value}}</option>
+        </select>
+        <div *ngIf = "roleDir.invalid && (phoneDir.pristine || roleDir.dirty || roleDir.touched)" class = "alert alert-danger">
+            <div *ngIf= "roleDir.errors?.['required']"> Please select yoru role</div>
+          </div>
+        <!-- <input type = "text" id="role" formControlName = "role" [(ngModel)] = "role" placeholder="CLIENT" name = "role"><br>
+        <br>
+        <br> -->
+        <br>
+        <br>
+
+        <button class="button" mat-raised-button color = accent type = "submit" class ="btn" (click) = registerUser() [disabled]="regForm.invalid">
+            Register
+        </button>
+        </form>
+    </div>
+</div>
+<!-- <div style="padding: 2em">
+    <div class="inner">
+        <h3> Registration Portal</h3>
+        <form  [formGroup] = "registerForm" (ngSubmit)="registerUser()"> -->
+            <!-- <form  [formGroup] = "registerForm"></form> -->
+            <!-- <label for = "username"> Username:</label><br>
+            <input type = "email" id="username" formControlName = "username" [(ngModel)] = "username" placeholder="example@provider.com" name = "username"> <br>
+            <span *ngIf = "f['username'].getError('email') != null"class = "errormessage"> Enter valid email</span>
+            <br>
+            <br> -->
+<!--     
+            <label for = "password"> Password: </label><br>
+            <input type = "password" id="password"formControlName = "password" [(ngModel)] = "password" placeholder="password" name = "password"><br>
+            <span *ngIf = "f['password'].getError('required') != null"class = "errormessage"> Password is required</span>
+            <br>
+            <br> -->
+    
+            <!-- <label for = "confirmpass">  Confirm Password: </label><br>
+            <input type = "password" id="confirmpass"formControlName = "confirmpass"placeholder="Input your password again" name = "confirmpass" ><br>
+            <span *ngIf = "f['confirmpass'].getError('required') != null"class = "errormessage"> Confirm password is required</span>
+            <span *ngIf = "f['confirmpass'].getError('MustMatch') != null"class = "errormessage"> Password is not the same</span> -->
+            
+            <!-- <br>
+            <br>
+            <label for = "name"> Full Name: </label><br>
+            <input type = "text" id="name" formControlName = "name" [(ngModel)] = "name" placeholder="Jenny Jollin" name = "name"><br>
+            <span *ngIf = "f['name'].getError('required') != null"class = "errormessage"> Name is required</span>
+            <br>
+            <br> -->
+            
+            <!-- <label for = "phonenumber"> Phone Number: </label><br>
+            <input type = "text" id="phonenumber" formControlName = "phonenumber" [(ngModel)] = "phonenumber" placeholder="(817)-867-5309" name = "phonenumber"><br>
+            <span *ngIf = "f['phonenumber'].getError('required') != null"class = "errormessage"> Phone number is required</span>
+            <br>
+            <br> -->
+    
+    
+            <!-- <label for = "role"> Type:</label><br>
+            <select id="role"[(ngModel)] = "role" formControlName="role"> 
+                <option> Select one...</option>
+                <option *ngFor = "let type of role | keyvalue">{{type.value}}</option>
+            </select> -->
+            <!-- <input type = "text" id="role" formControlName = "role" [(ngModel)] = "role" placeholder="CLIENT" name = "role"><br>
+            <br>
+            <br> -->
+<!--     
+            <button [disabled] = "registerForm.invalid"class="button" mat-raised-button color = accent type = "submit" class ="btn">
+                Register
+            </button>
+        </form>
+        </div>
+    </div> -->
+    

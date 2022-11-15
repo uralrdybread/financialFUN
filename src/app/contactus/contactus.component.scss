@@ -1,0 +1,29 @@
+.grid {
+    height: 100%;
+    display: grid;
+    grid-auto-columns: 1fr;
+    border: #101d67 5px solid;
+
+  }
+  
+  .player {
+    border: rgb(112, 119, 255) 5px solid;
+    display: flex;
+    justify-content: center;
+
+  }
+  .map {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    text-align: center;
+  }
+
+  i {
+    margin-right: 15px;
+  }
+
+  b {
+    margin-right: 15px
+  }

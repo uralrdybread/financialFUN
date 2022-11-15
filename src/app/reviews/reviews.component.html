@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<div style="padding: 2em">
+<div class = "card" >
+    <button type = "button" class = "btn" mat-raised-button color = accent (click)= getReviews() style = "width:10%;"> View all Reviews </button>
+    <h3> Let us know what you think!</h3>
+    <div *ngFor = "let user of profile">
+        <form #reviewForm = "ngForm">
+            <label for ="rating"> Rating:</label>
+            
+            <input type = "Number" min ="1" max ="5" formController = "rating" required [(ngModel)] = "rating" name = "rating" #rateDir = "ngModel"><br>
+            <div *ngIf = "rateDir.invalid && (rateDir.dirty || rateDir.touched)" class = "alert alert-danger">
+                <div *ngIf= "rateDir.errors?.['required']"> Rating is required</div>
+            </div>
+
+        
+          
+            <label for = "title"> Title: </label>
+            <input type = "text" placeholder="Title"  maxlength="255" style = "width: 9%;" formController = "title" 
+            required [(ngModel)] = "title" name = "title" #titleDir = "ngModel">
+            <div *ngIf = "titleDir.invalid && (titleDir.dirty || titleDir.touched)" class = "alert alert-danger">
+                <div *ngIf= "titleDir.errors?.['required']"> Title is required</div>
+            </div>
+            <br>
+            <label for = "user_ID"> ID:</label>
+            <input type = "Number" min = {{user.user_ID}} max={{user.user_ID}} size = "1" style = "width: 3%;"  formController = "user_ID" 
+            requried [(ngModel)] = "user_ID" name = "user_ID" #idDir = "ngModel"><br>
+            <div *ngIf = "idDir.invalid && (idDir.dirty || idDir.touched)" class = "alert alert-danger">
+                <div *ngIf= "idDir.errors?.['required']"> ID is required</div>
+            </div>
+            <!-- <select id = "user_ID" fromController = "user_ID">
+                <option *ngFor = "let user of profile" [(ngModel)] = "user_ID">{{user.user_ID}}</option>
+            </select>
+            <br> -->
+          
+            <label for = "body"> Leave your review:</label><br>
+            <textarea row = "3" cols="40" style = "height: 10.75em" maxlength="255" placeholder="Type your review here" name=" body" id="body" 
+            formController = "body" required [(ngModel)] = "body" name = "body" #bodyDir = "ngModel"
+            ></textarea><br>
+            <div *ngIf = "bodyDir.invalid && (bodyDir.dirty || bodyDir.touched)" class = "alert alert-danger">
+                <div *ngIf= "bodyDir.errors?.['required']"> Review can not be empty</div>
+            </div>
+            <button type = "submit" class = "btn" mat-raised-button color = accent (click)= submitReview() [disabled]="reviewForm.invalid">
+                Post Review
+            </button>
+            <!-- <button type = "button" class = "btn" mat-raised-button color = accent (click)= getReviews()> View all Reviews </button> -->
+        </form>
+    </div>
+   
+    <div class = "PastBox">
+        <table class = "table">
+            <tr>
+                <th> Name: </th>
+                <th> Rating: </th>
+                <th> Title: </th>
+                <th> Body: </th>
+            </tr>
+            <tr *ngFor = "let coll of collection | paginate:{ itemsPerPage: tableSize,
+            currentPage: page, totalItems:count}; let i = index">
+                <td>{{coll.user.name}}</td>
+                <td>{{coll.rating}}</td>
+                <td> {{coll.title}}</td>
+                <td>{{coll.body}}</td>
+            </tr>
+        </table>
+        <div>
+           <pagination-controls
+           previousLabel= "Prev"
+           nextLabel = "Next"
+           (pageChange)="onTableDataChange($event)"
+           >
+               
+           </pagination-controls> 
+        </div>
+        </div>
+    </div>
+</div>
+</html>
