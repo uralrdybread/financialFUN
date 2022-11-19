@@ -2,6 +2,10 @@ This was a group project working in conjunction with a BA team to developing a f
 
 I also created a google workspace for this company and every employee had a working email address with scheduling calendar that worked hand-in-hand with our advisory survey page. In the survey page you answered a few questions and clicked the corresponding radio button to be assigned a financial officer who most reflects your goals. After the survey is complete and the user clicks submit they are taken to an advisors google calendar where they can schedule a free consultation. The code for this survey system can be seen on the survey component provided.  The calendar is dynamic and interviews may only be assigned during business hours in 30 minute blocks. A verified email account is needed to prevent funny business and the scheduling may be changed at any time with notifications of changes being sent to each party. 
 
+![fun1](https://user-images.githubusercontent.com/48900828/202841813-b0cac6f2-879b-442b-b512-acf3256c9caf.PNG)
+![fun2](https://user-images.githubusercontent.com/48900828/202841816-7d94e25f-3e44-4c95-993c-810f2cb7d265.PNG)
+![fun3](https://user-images.githubusercontent.com/48900828/202841817-adf2fc07-50a9-4cb3-be14-e5c92d540855.PNG)
+
 Instead of using Bootstrap for this project I used Angular Material. It works well with Angular projects but I felt Bootstrap is still better for mobile first projects.
 
 # ProjectFun
