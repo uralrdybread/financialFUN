@@ -1,4 +1,4 @@
-## financialFUN
+# financialFUN
 
 This was a group project working in conjunction with a BA team to developing a financial advisory business. 
 My role on the project was the entire front-end but I also created the domain and hosted the site on Firebase. 
