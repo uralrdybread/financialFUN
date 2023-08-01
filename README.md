@@ -1,7 +1,4 @@
-# financialFUN
-
-This was a group project working in conjunction with a BA team to developing a financial advisory business. 
-My role on the project was the entire front-end but I also created the domain and hosted the site on Firebase. 
+# financialFUN 
 
 I also created a google workspace for this company and every employee had a working email address with scheduling calendar that worked hand-in-hand with our advisory survey page. 
 In the survey page you answered a few questions and clicked the corresponding radio button to be assigned a financial officer 
